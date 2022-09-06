@@ -1,0 +1,59 @@
+/* EXPENSE LOG STYLES BELOW */
+.expense-heading-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  width: 50rem;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.expense-columns {
+  display: flex;
+  justify-content: center;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.column-background-color {
+  background-color: white;
+  border-top: 1px solid black;
+}
+
+.date-column {
+  width: 150px;
+  border-right: 1px solid rgb(180, 180, 180);
+}
+.description-column {
+  justify-content: left;
+  text-align: left;
+  padding-left: 1rem;
+  width: 345px;
+  border-right: 1px solid rgb(180, 180, 180);
+}
+.location-column {
+  width: 175px;
+  border-right: 1px solid rgb(180, 180, 180);
+}
+.amount-column {
+  width: 130px;
+}
+.delete-button:hover {
+  color: red;
+}
+
+.delete-button:active {
+  background-color: red;
+}
+
+.delete-button:focus {
+  outline: none;
+}
+
+.delete-button {
+  margin-left: 0rem;
+  background-color: rgb(180, 186, 236);
+  color: rgb(0, 0, 0);
+  outline: none;
+  border: 1px solid black;
+  padding: 0 0.4rem;
+  font-weight: bold;
+}

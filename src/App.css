@@ -1,3 +1,8 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
 .App {
   text-align: center;
 }
@@ -13,19 +18,19 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #7bff64;
 }
 
-.App-link {
-  color: #61dafb;
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +40,27 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* BELOW WAS ADDED BY NATHAN BESSLER */
+.style-edits {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+  margin-top: 2rem;
+}
+
+.expense-heading-container {
+  margin-right: 1.6rem;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  color: black;
+  font-weight: bold;
+  border-radius: 1rem 1rem 0 0;
+  padding: 0 1rem;
+  background-color: rgb(180, 186, 236);
 }
