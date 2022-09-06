@@ -1,4 +1,4 @@
-# Expense Manager Web App
+# Expense Manager Web App (With React)
 
 <br>
 
