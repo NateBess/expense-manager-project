@@ -2,7 +2,7 @@
 
 <br>
 
-View this project [here](https://natebess.github.io/expense-manager-project/)
+View this project [here](https://expense-manager.nathanbessler.com/)
 
 <br>
 
