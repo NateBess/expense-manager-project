@@ -3,16 +3,29 @@ import "./App.css";
 import ExpenseInformationComponent from "./components/ExpenseInformationComponent/ExpenseInformationComponent.js";
 import ExpenseLog from "./components/ExpenseLog/ExpenseLog";
 
+const getElement = (id) => document.getElementById(id);
+const getValue = (id) => document.getElementById(id).value;
+
+const expenseDate = getElement("expense-date");
+const expenseAmount = getElement("expense-amount");
+const expenseLocation = getElement("expense-location");
+const expenseDescription = getElement("expense-description");
+
 function App() {
   const [entriesArray, setEntriesArray] = useState([]);
   const [uniqueID, setUniqueID] = useState(0);
 
-  const getElement = (id) => document.getElementById(id);
+  const dateValue = () => getValue("expense-date");
+  const amountValue = () => getValue("expense-amount");
+  const locationValue = () => getValue("expense-location");
+  const descriptionValue = () => getValue("expense-description");
 
-  const dateValue = () => getElement("expense-date").value;
-  const amountValue = () => getElement("expense-amount").value;
-  const locationValue = () => getElement("expense-location").value;
-  const descriptionValue = () => getElement("expense-description").value;
+  const clearValues = () => {
+    expenseDate.value = "";
+    expenseAmount.value = "";
+    expenseLocation.value = "";
+    expenseDescription.value = "";
+  };
 
   const addDeleteEvents = () => {
     const deleteArray = document.querySelectorAll(".delete-option");
@@ -43,6 +56,7 @@ function App() {
       };
       const newEntriesArray = [...entriesArray, expenseItem];
       setEntriesArray(newEntriesArray);
+      clearValues();
     }
   };
 
