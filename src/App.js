@@ -49,16 +49,13 @@ function App() {
       const deleteButton = getElement(`delete-${elementID}`);
       deleteButton.addEventListener("click", (event) => {
         const deleteThis = getElement(`entry-${elementID}`);
-        // added try catch to remove console warning in browser.
-        try {
-          const newEntriesArray = [];
-          Array.from(entriesArray).filter((entry) => {
-            if (entry.entryID !== parseFloat(elementID)) {
-              newEntriesArray.push(entry);
-            }
-          });
-          setEntriesArray(newEntriesArray);
-        } catch {}
+        const newEntriesArray = [];
+        Array.from(entriesArray).filter((entry) => {
+          if (entry.entryID !== parseFloat(elementID)) {
+            newEntriesArray.push(entry);
+          }
+        });
+        setEntriesArray(newEntriesArray);
       });
     }
     return deleteArray;
