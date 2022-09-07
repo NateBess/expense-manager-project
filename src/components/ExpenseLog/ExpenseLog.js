@@ -2,20 +2,18 @@ import React from "react";
 import "./ExpenseLog.css";
 import ExpenseEntry from "./sub-components/ExpenseEntry";
 
-function ExpenseLog({ entriesArray }) {
-  if (entriesArray.length === 0) {
-    return (
-      <table className="expense-log-container-empty">
-        <tbody>
-          <tr>
-            <td>Entries will show up here...</td>
-          </tr>
-        </tbody>
-      </table>
-    );
-  } else {
+function ExpenseLog({ entriesArray, entriesExist }) {
+  if (entriesExist) {
     return (
       <table className="expense-log-container">
+        <thead className="expense-columns">
+          <tr className="expense-heading-container">
+            <th className="date-column heading">Date</th>
+            <th className="description-column heading">Description</th>
+            <th className="location-column heading">Location</th>
+            <th className="amount-column heading">Amount</th>
+          </tr>
+        </thead>
         <tbody>
           {entriesArray.map((entry) => {
             return (

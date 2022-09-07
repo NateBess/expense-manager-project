@@ -1,0 +1,21 @@
+.expense-log-container-empty {
+  background-color: white;
+  width: 50rem;
+  margin-right: 1.6rem;
+}
+
+.expense-location-component {
+  width: 100%;
+}
+
+.input-group-text {
+  font-weight: bold;
+}
+
+.expense-amount-component {
+  color: green;
+}
+
+#expense-amount {
+  border-radius: 0 0.3rem 0.3rem 0;
+}

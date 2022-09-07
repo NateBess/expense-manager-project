@@ -4,6 +4,7 @@ import ExpenseAmount from "./sub-components/ExpenseAmount";
 import ExpenseDate from "./sub-components/ExpenseDate";
 import ExpenseDescription from "./sub-components/ExpenseDescription";
 import ExpenseLocation from "./sub-components/ExpenseLocation";
+import "./sub-components/ExpenseSubComponentStyles.css";
 
 function ItemTemplateComponent() {
   return (

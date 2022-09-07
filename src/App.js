@@ -49,13 +49,23 @@ function App() {
       const deleteButton = getElement(`delete-${elementID}`);
       deleteButton.addEventListener("click", (event) => {
         const deleteThis = getElement(`entry-${elementID}`);
+        // added try catch to remove console warning in browser.
         try {
-          // added try catch to remove console warning in browser.
-          deleteThis.remove();
+          const newEntriesArray = [];
+          Array.from(entriesArray).filter((entry) => {
+            if (entry.entryID !== parseFloat(elementID)) {
+              newEntriesArray.push(entry);
+            }
+          });
+          setEntriesArray(newEntriesArray);
         } catch {}
       });
     }
     return deleteArray;
+  };
+
+  const doEntriesExist = () => {
+    if (entriesArray.length > 0) return true;
   };
 
   useEffect(() => {
@@ -71,15 +81,7 @@ function App() {
     <div className="App style-edits">
       <h1>Nate's Expense Manager</h1>
       <ExpenseInformationComponent />
-      <div className="expense-heading-container">
-        <span className="expense-columns">
-          <div className="date-column heading">Date</div>
-          <div className="description-column heading">Description</div>
-          <div className="location-column heading">Location</div>
-          <div className="amount-column heading">Amount</div>
-        </span>
-      </div>
-      <ExpenseLog entriesArray={entriesArray} />
+      <ExpenseLog entriesArray={entriesArray} entriesExist={doEntriesExist()} />
     </div>
   );
 }

@@ -3,7 +3,10 @@ import "./ExpenseEntry.css";
 
 function ExpenseEntry({ uniqueID, date, description, location, amount }) {
   return (
-    <tr id={`entry-${uniqueID}`} className="expense-columns delete-option">
+    <tr
+      id={`entry-${uniqueID}`}
+      className="expense-columns delete-option entry"
+    >
       <td className="date-column column-background-color">{date}</td>
       <td className="description-column column-background-color">
         {description}

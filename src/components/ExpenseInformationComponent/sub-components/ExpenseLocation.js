@@ -1,5 +1,4 @@
 import React from "react";
-import "./ExpenseLocation.css";
 
 function ExpenseLocation() {
   return (
