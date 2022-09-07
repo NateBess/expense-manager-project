@@ -17,7 +17,7 @@ function ExpenseLocation() {
           placeholder="Location..."
           aria-label="UserDescription"
           aria-describedby="basic-addon1"
-          autoComplete="false"
+          autoComplete="off"
         ></input>
       </div>
     </div>

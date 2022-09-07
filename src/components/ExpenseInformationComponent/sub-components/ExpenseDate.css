@@ -1,2 +1,6 @@
 .expense-date-component {
 }
+
+.input-group-text {
+  font-weight: bold;
+}

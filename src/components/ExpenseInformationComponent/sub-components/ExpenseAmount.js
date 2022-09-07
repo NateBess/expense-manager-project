@@ -9,12 +9,13 @@ function ExpenseAmount() {
           <span className="input-group-text">$</span>
         </div>
         <input
-          type="text"
+          type="number"
           id="expense-amount"
           className="form-control edit-amout-box-style"
           placeholder="0.00"
+          step=".01"
           aria-label="Amount (to the nearest dollar)"
-          autoComplete="false"
+          autoComplete="off"
         ></input>
         <div className="input-group-append"></div>
       </div>

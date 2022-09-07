@@ -17,7 +17,7 @@ function ExpenseDescription() {
           placeholder="What was the expense? (Optional)"
           aria-label="UserDescription"
           aria-describedby="basic-addon1"
-          autoComplete="false"
+          autoComplete="off"
         ></input>
       </div>
     </div>

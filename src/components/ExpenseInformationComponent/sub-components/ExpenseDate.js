@@ -16,6 +16,7 @@ function ExpenseDate() {
           className="form-control"
           aria-label="Default"
           aria-describedby="inputGroup-sizing-default"
+          autoComplete="off"
         ></input>
       </div>
     </div>
