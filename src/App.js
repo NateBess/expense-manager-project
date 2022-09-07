@@ -11,14 +11,14 @@ const expenseAmount = getElement("expense-amount");
 const expenseLocation = getElement("expense-location");
 const expenseDescription = getElement("expense-description");
 
+const dateValue = () => getValue("expense-date");
+const amountValue = () => parseFloat(getValue("expense-amount")).toFixed(2);
+const locationValue = () => getValue("expense-location");
+const descriptionValue = () => getValue("expense-description");
+
 function App() {
   const [entriesArray, setEntriesArray] = useState([]);
   const [uniqueID, setUniqueID] = useState(0);
-
-  const dateValue = () => getValue("expense-date");
-  const amountValue = () => getValue("expense-amount");
-  const locationValue = () => getValue("expense-location");
-  const descriptionValue = () => getValue("expense-description");
 
   const clearValues = () => {
     expenseDate.value = "";
